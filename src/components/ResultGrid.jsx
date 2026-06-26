@@ -40,19 +40,19 @@ const ResultGrid = () => {
                         url:item.url
                     }))
                 }
-                if (activeTab == 'gif') {
-                    let response = await fetchGIF(query)
+                // if (activeTab == 'gif') {
+                //     let response = await fetchGIF(query)
 
-                    data = response.data.results.map((item) => ({
-                        id: item.id,
-                        title: item.title || 'GIF',
-                        type: 'gif',
-                        thumbnail: item.media_formats.tinygif.url,
-                        src: item.media_formats.gif.url,
-                        url:item.url
-                    }))
+                //     data = response.data.results.map((item) => ({
+                //         id: item.id,
+                //         title: item.title || 'GIF',
+                //         type: 'gif',
+                //         thumbnail: item.media_formats.tinygif.url,
+                //         src: item.media_formats.gif.url,
+                //         url:item.url
+                //     }))
 
-                }
+                // }
                 dispatch(setResults(data))
 
             } catch (err) {
